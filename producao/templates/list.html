@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block titulo %} Minha Produção {% endblock %}
+
+{% block conteudo %}
+
+<h2>Minha Produção</h2>
+<br/>
+<br/>
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Produto</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Quantidade</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for producao in producoes %}
+    <tr>
+        <td>{{ producao.produto.nome }}</td>
+        <td>{{ producao.preco }}</td>
+        <td>{{ producao.quantidade }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
