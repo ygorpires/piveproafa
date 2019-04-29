@@ -41,10 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+<<<<<<< Updated upstream
     'crispy_forms',
     'cooperativa',
     'producao',
     'endereco'
+=======
+    'cliente',
+    'assinatura',
+    'crispy_forms'
+>>>>>>> Stashed changes
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
