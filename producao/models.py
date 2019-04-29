@@ -14,4 +14,4 @@ class Producao(models.Model):
     cooperativa= models.OneToOneField(Cooperativa,null=False,blank=False,on_delete= models.PROTECT)
     produto=models.OneToOneField(Produto,null=False,blank=False,on_delete= models.PROTECT)
     preco=models.DecimalField(max_digits=3,decimal_places=2)
-    quantidade= models.IntegerField()
+    quantidade= models.DecimalField(max_digits=4,decimal_places=3)
