@@ -6,8 +6,7 @@
 
 <H2>Pagina inicial teste</H2></br>
 {%if user.is_authenticated%}
-<p>Ola {{user.username}}</p>
-<a href="{% url 'logout'%}">Sair</a>
+<p>Olá {{user.username}}</p>
 {%else%}
 <a href="{% url 'login'%}">Entrar</a>
 {%endif%}
