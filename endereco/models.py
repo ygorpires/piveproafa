@@ -1,8 +1,10 @@
 from django.db import models
+from cliente.models import Cliente
 
-# Create your models here.
+
 class Endereco(models.Model):
-    logradouro = models.CharField(max_length=80)
+    logradouro = models.CharField(max_length=80,null=True)
     numero = models.IntegerField()
-    complemento = models.CharField(max_length=80)
-    telefone = models.CharField(max_length=30)
+    bairro = models.CharField(max_length=80,null=True)
+    complemento = models.CharField(max_length=80,null=True)
+    cliente = models.OneToOneField(Cliente, blank=True, null=True, on_delete=models.CASCADE)

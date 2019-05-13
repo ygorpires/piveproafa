@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block titulo %} Home {% endblock %}
+{%load crispy_forms_tags%}
+
+{% block conteudo %}
+
+<form action="{% url 'cadastro' %}" method="post">
+    {%csrf_token%}
+
+    {{formEnd|crispy}}
+    <butto type="submit">Salvar</butto>
+
+</form>
+
+
+{% endblock %}

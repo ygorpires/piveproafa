@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block titulo %} Home {% endblock %}
+{%load crispy_forms_tags%}
+
+{% block conteudo %}
+{% for clientes in cliente%}
+<p>{{clientes.id}}</p>
+<p>{{clientes.nome}}</p>
+{%endfor%}
+
+{% endblock %}

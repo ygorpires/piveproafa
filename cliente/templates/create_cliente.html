@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+
+{% block titulo %} Home {% endblock %}
+{%load crispy_forms_tags%}
+
+{% block conteudo %}
+
+<form action="{% url 'create_cliente' %}" method="post">
+    {%csrf_token%}
+    {{form|crispy}}
+    {{formEnd|crispy}}
+    <button type="submit">Salvar</button>
+
+</form>
+
+
+{% endblock %}

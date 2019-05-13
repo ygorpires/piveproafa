@@ -29,7 +29,7 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 
 ALLOWED_HOSTS = []
-
+#AUTH_USER_MODEL = 'users.CustomUser'
 
 # Application definition
 
@@ -41,16 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-<<<<<<< Updated upstream
     'crispy_forms',
     'cooperativa',
     'producao',
-    'endereco'
-=======
+    'endereco',
     'cliente',
-    'assinatura',
-    'crispy_forms'
->>>>>>> Stashed changes
+    'assinatura'
+
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
